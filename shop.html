@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noir Brew Shop</title>
+    <script src="https://kit.fontawesome.com/80fae2321e.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Futura', sans-serif;
+            color: rgb(18, 45, 18);
+            background-image: url(images/coffeeback.jpg);
+            margin: 0;
+            padding: 0;
+            color: rgb(18, 45, 18);
+        }
+
+        /* Header & Footer */
+        header, footer {
+            background-color: rgba(232, 221, 211, 1);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color: rgb(18, 45, 18);
+        }
+
+        header h1 {
+            font-size: 30px;
+            color: rgb(18, 45, 18);
+        }
+
+        .cart-container {
+            position: relative;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background: rgb(18, 45, 18);
+            color: white;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 20px;
+            display: none;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-left: 420px;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border: 2px solid rgb(18, 45, 18);
+            border-radius: 25px;
+            font-size: 18px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+            align-items: center;
+        }
+
+        .search-bar:focus {
+            border-color: rgba(18, 45, 18, 0.8);
+            box-shadow: 0 0 8px rgba(18, 45, 18, 0.5);
+        }
+
+        .search-button {
+            padding: 10px 15px;
+            border: none;
+            background-color: rgb(18, 45, 18);
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: rgba(146, 175, 146, 0.8);
+        }
+
+        .shop-tittle {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        /* Products */
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            padding: 40px;
+            padding-top: 35px;
+            padding-bottom: 50px;
+        }
+
+        .product {
+            text-align: center;
+            border: 1px solid rgb(151, 147, 147);
+            padding: 15px;
+            border-radius: 10px;
+            background-color: rgba(232, 221, 211, 0.881);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .add-to-cart {
+            background-color: rgb(18, 45, 18);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: rgba(146, 175, 146, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(232, 221, 211, 1);
+            color: rgb(18, 45, 18);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer a {
+            color: rgb(18, 45, 18);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .top {
+            font-family: "Questa Sans Bold";
+            padding: 8px;
+        }
+
+.note {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.cart-container {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.cart-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-dropdown li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.cart-dropdown p {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="top">
+        <h1>THE NOIR SHOP</h1>
+        <nav>
+            <ul class="tops">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="ourstory.html">Our Story</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="events.html">Happenings</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items"></ul>
+                <p id="cart-total">Total: $0.00</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="shop-tittle">Shop House Favorites</h1>
+        <div class="search-container">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Latte me help you find something...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="products-container">
+            <div class="product"><img src="images/blonderoa.jpg" alt="Dark Roast Coffee"><h3>Blonde Roast Coffee</h3><p>Rich & bold blend, 12oz</p><p>$14.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/lightroa.jpg" alt="Light Blonde Coffee"><h3>Light Roast Coffee</h3><p>Bright & smooth blend, 12oz</p><p>$12.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/mediumroast.jpg" alt="Costa Rica Coffee"><h3>Medium Roast Coffee</h3><p>Single-origin specialty, 12oz</p><p>$16.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/darkroa.jpg" alt="Espresso Beans"><h3>Dark Roast Coffee</h3><p>Perfect for espresso lovers, 12oz</p><p>$15.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/noirroa.jpg" alt="French Press"><h3>Noir Signature Coffee</h3><p>Bold, smooth, and unforgettable, 12oz</p><p>$29.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/expressoroa.jpg" alt="Cold Brew Kit"><h3>Expresso Beans</h3><p>An expresso ritual must have, 12oz</p><p>$24.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/organicdecaf.jpg" alt="Pour Over Coffee Maker"><h3>Organic Decaf</h3><p>Rich, intense, and 100% organic</p><p>$19.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/italianpress.jpg" alt="Organic Decaf Coffee"><h3>Italian Press</h3><p>Smooth & naturally processed, 12oz</p><p>$13.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/mug.jpg" alt="Coffee Grinder"><h3>Mug</h3><p>Crafted for slow sips & cozy mornings.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/tumbler.jpg" alt="Coffee Grinder"><h3>Travel Tumbler</h3><p>Hot or iced, your brew stays just right.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/candle.jpg" alt="Coffee Grinder"><h3>Noir Candle</h3><p>The scent of fresh coffee, without the caffeine.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/coffeegrinder.jpg" alt="Coffee Grinder"><h3>Coffee Grinder</h3><p>Precision grinding for fresh coffee</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/sticker.jpg" alt="Coffee Grinder"><h3>Brew Stickers</h3><p>Stick them anywhere, spread the love.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/coasters.jpg" alt="Coffee Grinder"><h3>Table Coaster</h3><p>Just a stylist home for your mug.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/tote.jpg" alt="Coffee Grinder"><h3>Noir Tote</h3><p>Roomy, durable and chic.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+            <div class="product"><img src="images/plannerkit.jpg" alt="Coffee Grinder"><h3>Daily Planner Kit</h3><p>Stay organized, stay inspired.</p><p>$34.99</p><button class="add-to-cart">Add to Cart</button></div>
+        </div>
+        <div>
+            <p class="note">NOTE: In store pick up only.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Noir Brew. All rights reserved.</p>
+    </footer>
+    <script>
+        let cartCount = 0;
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                document.getElementById('cart-count').innerText = cartCount;
+            });
+        });
+
+// Add event listener to buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+        const product = this.parentElement;
+        const name = product.querySelector('h3').innerText;
+        const price = parseFloat(product.querySelector('p:nth-of-type(2)').innerText.replace('$', ''));
+
+        addToCart(name, price);
+    });
+});
+
+function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ name, price, quantity: 1 });
+    }
+    updateCart();
+}
+
+function updateCart() {
+    cartItemsList.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        let li = document.createElement('li');
+                li.textContent = `${item.name} x${item.quantity}`;
+                cartItemsList.appendChild(li);
+                total += item.price * item.quantity;
+            });
+        
+            cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.style.display = cart.length > 0 ? 'block' : 'none';
+        }
+    cartItemsList.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        let li = document.createElement('li');
+        li.textContent = `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+        cartItemsList.appendChild(li);
+        total += item.price * item.quantity;
+    });
+
+    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.style.display = cart.length > 0 ? 'block' : 'none';
+
+
+// Toggle cart dropdown
+function toggleCart() {
+    cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+    </script>
+</body>
+</html>

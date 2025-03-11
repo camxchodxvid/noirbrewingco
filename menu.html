@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/80fae2321e.js" crossorigin="anonymous"></script>
+    <title>Noir Brew Menu</title>
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap');
+
+        /* General Page Styles */
+        body {
+            font-family: 'Futura', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f1ea;
+            background-image: url('images/coffeeback.jpg'); /* Background Image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: rgb(18, 45, 18);
+        }
+
+        /* Header Styles */
+        header {
+    background-color: rgba(232, 221, 211, 1); 
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(18, 45, 18);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    max-height: 1px;
+}
+
+        .top {
+            font-family: "Questa Sans Bold";
+            padding: 50px;
+        }
+
+        .tops {
+            padding-right: 50px;
+            font-size: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(18, 45, 18);
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        /* Menu Section */
+        .menu {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .menu h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            padding-top: 45px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .menu-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .menu-item p {
+            font-size: 18px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(232, 221, 211, 1);
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        .munuu {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="top">
+        <h1>NOIR</h1>
+        <a href="ourstory.html" class="top"> 
+        </a> 
+        <nav>
+            <ul class="tops">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="ourstory.html">Our Story</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="events.html">Happenings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <main>
+        <section class="menu"></section>
+            <h1 class="menuu">Coffee</h1>
+            <div class="menu-items">
+                <div class="menu-item"><h2>Espresso</h2><p>Medium 12 Oz - $2 | Large 16 Oz - $3.75</p></div>
+                <div class="menu-item"><h2>Caffe Americano</h2><p>Medium 12 Oz - $3.75 | Large 16 Oz - $4.50</p></div>
+                <div class="menu-item"><h2>Cappuccino</h2><p>Medium 12 Oz - $4 | Large 16 Oz - $5</p></div>
+                <div class="menu-item"><h2>Matcha Latte</h2><p>Medium 12 Oz - $4.50 | Large 16 Oz - $5.50</p></div>
+                <div class="menu-item"><h2>Caffe Mocha</h2><p>Medium 12 Oz - $4.50 | Large 16 Oz - $5.50</p></div>
+                <div class="menu-item"><h2>Hot Chocolate</h2><p>$3.50</p></div>
+                <div class="menu-item"><h2>Cold Brew Coffee</h2><p>Medium 12 Oz - $4 | Large 16 Oz - $5</p></div>
+                <div class="menu-item"><h2>Iced Caffe Latte</h2><p>Medium 12 Oz - $4 | Large 16 Oz - $5</p></div>
+                <div class="menu-item"><h2>Iced Matcha Latte</h2><p>Medium 12 Oz - $4.50 | Large 16 Oz - $5.50</p></div>
+                <div class="menu-item"><h2>Iced Tea</h2><p>$3</p></div>
+                <div class="menu-item"><h2>Iced Americano</h2><p>Medium 12 Oz - $3.75 | Large 16 Oz - $4.50</p></div>
+                <div class="menu-item"><h2>Iced Flavored Latte</h2><p>Medium 12 Oz - $4.50 | Large 16 Oz - $5.50</p></div>
+                <div class="menu-item"><h2>Iced Caffe Mocha</h2><p>Medium 12 Oz - $4.50 | Large 16 Oz - $5.50</p></div>
+                <div class="menu-item"><h2>Cucumber Mint Iced Tea</h2><p>$4</p></div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h1>Cocktails</h1>
+            <div class="menu-items">
+                <div class="menu-item"><h2>Margarita</h2><p>Patrón Silver Tequila, Cointreau, fresh lime juice, agave - $15</p></div>
+                <div class="menu-item"><h2>Spicy Margarita</h2><p>Don Julio Blanco Tequila, 21 Seeds Cucumber Jalapeño, fresh lime juice, simple syrup - $15</p></div>
+                <div class="menu-item"><h2>Naked & Famous</h2><p>Ilegal Joven Mezcal, Aperol, Yellow Chartreuse, fresh lemon juice, turbinado - $15</p></div>
+                <div class="menu-item"><h2>The Persephine</h2><p>Grey Goose Vodka, pomegranate liqueur, Cointreau, cranberry, lemon - $15</p></div>
+                <div class="menu-item"><h2>Aperol Spritz</h2><p>Aperol, Gambino Prosecco, Fever Tree club soda - $15</p></div>
+                <div class="menu-item"><h2>Espresso Martini</h2><p>Ketel One Vodka, Bols cream de cacao, Mr. Black coffee liqueur, Maven cold brew, Monin organic honey - $15</p></div>
+                <div class="menu-item"><h2>Mezcalita</h2><p>Patrón Silver Tequila, Del Maguey 'Vida' Mezcal, Cointreau, fresh lime juice, agave - $15</p></div>
+                <div class="menu-item"><h2>Last Word</h2><p>Citadelle Gin, Green Chartreuse, Luxardo Maraschino, fresh lime juice - $15</p></div>
+                <div class="menu-item"><h2>Bee's Knees</h2><p>The Botanist Gin, fresh lemon juice, Monin organic honey - $15</p></div>
+                <div class="menu-item"><h2>Negroni</h2><p>Bombay Sapphire Gin, Campari, Cinzano sweet vermouth - $15</p></div>
+                <div class="menu-item"><h2>Kentucky Buck</h2><p>Maker's Mark Bourbon, Monin strawberry purée, simple syrup, lemon juice, Angostura bitters, Fever Tree ginger beer - $15</p></div>
+                <div class="menu-item"><h2>Espresso Mexitini</h2><p>Casamigos Reposado, Mr. Black coffee liqueur, Maven cold brew, Monin organic honey - $15</p></div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h1>Lunch & Dinner</h1>
+            <div class="menu-items">
+                <div class="menu-item"><h2>Roast Turkey Sandwich</h2><p>Bacon, brie, dijon mayonnaise, lettuce on wheat - $13</p></div>
+                <div class="menu-item"><h2>Southwest Tuna Salad Sandwich</h2><p>On wheat, bagel, or baguette - $13</p></div>
+                <div class="menu-item"><h2>Ham & Swiss Cheese Sandwich</h2><p>Butter, dijonnaise, arugula on baguette - $12</p></div>
+                <div class="menu-item"><h2>Truffled Chicken Sandwich</h2><p>On croissant - $14</p></div>
+                <div class="menu-item"><h2>Vegetarian Pita Sandwich</h2><p>Sun-dried tomato, hummus, ricotta, roasted portobello - $11</p></div>
+                <div class="menu-item"><h2>Caesar Salad</h2><p>Caesar dressing, parmesan reggiano, croutons - $12</p></div>
+                <div class="menu-item"><h2>Salad of Arugula</h2><p>Strawberry, artichoke, toasted hazelnuts, creamy citrus dressing - $13</p></div>
+                <div class="menu-item"><h2>Fennel Sausage Pizza</h2><p>Onion, ricotta, arugula - $14</p></div>
+                <div class="menu-item"><h2>Buffalo Chicken Pizza</h2><p>Gorgonzola, red onion, cilantro - $14</p></div>
+                <div class="menu-item"><h2>Margherita Pizza</h2><p>Fresh mozzarella, tomato, basil - $14</p></div>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Noir Brew. All rights reserved.</p>
+    </footer>
+</body>
+</html>

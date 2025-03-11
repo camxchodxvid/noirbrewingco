@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happenings | Noir Brew</title>
+    <script src="https://kit.fontawesome.com/80fae2321e.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: "Questa Sans Bold";
+            margin: 0;
+            padding: 0;
+            background-image: url(images/coffeeback.jpg);
+            color: rgb(45, 62, 47);
+        }
+        header, footer {
+            background: rgb(232, 221, 211, 1);
+            color: rgb(18, 45, 18);
+            text-align: center;
+            padding: 15px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .event {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .event:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .event img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .event img:hover {
+            transform: scale(1.05);
+        }
+        .event h2 {
+            margin-top: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        .event p {
+            max-width: 800px;
+            margin: 0 auto 15px;
+            line-height: 1.5;
+        }
+        .event a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2D3E2F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .event a.button:hover {
+            background: rgb(165, 124, 84);
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .subscribe-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.subscribe-btn {
+    background-color: rgb(18, 45, 18);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: rgb(165, 124, 84);
+}
+
+.popup {
+        display: none; /* This ensures the popup is hidden on page load */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+        position: relative;
+    }
+
+    .popup-content input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .popup-content button {
+        background: #333;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Noir Brew Happenings</h1>
+        <nav class="meh">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="menu.html">Menu</a>
+            <a href="happenings.html">Happenings</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="event">
+            <img src="images/dj.jpg" alt="Live Jazz Night at Noir Brew">
+            <h2>Coffee & House</h2>
+            <p>Join us for a day of house music where coffee & beats come together. - March 15, 12PM -7 :30PM</p>
+            <a href="https://www.healthandbass.com/post/why-house-music-feels-so-good?utm_source=chatgpt.com" target="_blank" class="button">Learn More</a>
+        </div>
+        <div class="event">
+            <img src="images/latteart.jpg" alt="Latte Art Workshop at Noir Brew">
+            <h2>Latte Art Throwdown</h2>
+            <p>Baristas go head-to-head in a friendly competition to create the best latte art. - March 22, 1PM - 3PM</p>
+            <a href="https://barist.art/" target="_blank" class="button">Practice</a>
+        </div>
+        <div class="event">
+            <img src="images/bookclub.jpg" alt="Weekend Brunch Special at Noir Brew">
+            <h2>Book Club: The Inherited Mind</h2>
+            <p>A discussion on mental health and generational struggles, featuring The inherited Mind by James Longman. - Every Thrusday, 7PM - 8:00PM</p>
+            <a href="https://www.barnesandnoble.com/w/the-inherited-mind-james-longman/1145322298" target="_blank" class="button">Join Us</a>
+        </div>
+        <div class="event">
+            <img src="images/latino.jpg" alt="Open Mic Night at Noir Brew">
+            <h2>latino Support Fundraiser</h2>
+            <p>A dedicated to supporting the Latino community, Raising awareness, and donating organizations making impact. - April 5, All Day</p>
+            <a href="https://hispanicheritage.org/" target="_blank" class="button">Learn More</a>
+        </div>
+        <div class="event">
+            <img src="images/coffeeluca.jpg" alt="Exclusive Coffee Tasting at Noir Brew">
+            <h2>Coffe with Your Fur Baby</h2>
+            <p>Bring your furry friend & enjoy coffe together! Complentary pet treats for every guest who brings a pet. - April 12, All Day</p>
+            <a href="https://newsinhealth.nih.gov/2018/02/power-pets" target="_blank" class="button">Learn More</a>
+        </div>
+    </div>
+    <div class="subscribe-container">
+        <button class="subscribe-btn" onclick="openPopup()">Subscribe to our Newsletter</button>
+    </div>
+    
+    <div id="popup" class="popup" onclick="closePopup(event)">
+        <div class="popup-content" onclick="event.stopPropagation();">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscribe-form" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Noir Brew. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+    
+        function closePopup(event) {
+            if (event.target.id === "popup" || event.target.className === "close") {
+                document.getElementById("popup").style.display = "none";
+            }
+        }
+    
+        function submitForm(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+    
+            if (name && email) {
+                alert("Thank you for subscribing!");
+                document.getElementById("popup").style.display = "none";
+            } else {
+                alert("Please fill in both fields.");
+            }
+        }
+    </script>
+</body>
+</html>

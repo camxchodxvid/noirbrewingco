@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Noir Brew</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Futura', sans-serif;
+            margin: 0;
+            padding-top: 100px;
+            background-color: rgb(245, 245, 245);
+            color: rgb(18, 45, 18);
+            text-align: center;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(232, 221, 211, 1);
+            color: rgb(18, 45, 18);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 20px;
+    text-align: center;
+    position: fixed; /* Keeps the header at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;}
+
+    
+        .surface {
+            font-size: 2.5rem;
+        }
+
+        .top {
+            font-family: "Questa Sans Bold";
+            padding: 5px;
+        }
+
+        .tops {
+            padding-right: 50px;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .story-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 50px;
+        }
+        
+        .circular-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 120px;
+            margin-bottom: px;
+        }
+        
+        .circular-images img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .circular-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .commitment-container {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Futura', sans-serif;
+}
+
+.commitment-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.commitment-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    line-height: 1.6;
+}
+
+.commitment-images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 100px;
+
+}
+
+.commitment-image {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(232, 221, 211, 1);
+            color: rgb(18, 45, 18);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer a {
+            color: rgb(18, 45, 18);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="top">
+        <h1 href="index.html">NOIR</h1>
+        <nav>
+            <ul class="tops">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="ourstory.html">Our Story</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="events.html">Happenings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="surface">Beneath The Surface</h1>
+        <p class="story-text">
+            Noir Brew was born from a lifelong love affair with coffee—its depth, its complexity, and the way it brings people together. Growing up in Italy, coffee wasn’t just a drink; it was a ritual, a moment of connection, and a reflection of craftsmanship passed down through generations. Mornings were filled with the rich aroma of fresh espresso, afternoons with the warmth of a slow-sipped cappuccino, and evenings with the hum of conversation over a well-brewed cup.
+        </p>
+        <p class="story-text">
+            Beyond the café culture, we became fascinated with the journey of coffee—from the sun-drenched fields where beans are carefully cultivated to the intricate roasting process that unlocks their bold and delicate flavors. This passion led us to create Noir Brew, a brand dedicated to honoring the artistry behind every cup.
+        </p>
+        <p class="story-text">
+            We source the finest beans, curate exceptional blends, and ensure that each sip embodies quality, tradition, and sophistication. Every step, from the hands of the farmers to the final pour, is treated with care and respect—so that what reaches your cup isn’t just coffee, but a story of heritage, craftsmanship, and pure indulgence.
+        </p>
+        <p class="story-text">Welcome to Noir Brew—where every cup is a journey.</p>
+        
+        <div class="circular-images">
+            <img src="images/pisca.jpg" alt="Coffee Beans">
+            <img src="images/muchobeans.jpg" alt="Barista Pouring Coffee">
+            <img src="images/roasting.jpg" alt="Espresso Shot">
+            <img src="images/grinding.jpg" alt="Coffee Farm">
+            <img src="images/hotdrink.jpg" alt="Cup of Cappuccino">
+        </div>
+    </div>
+    <section id="commitment" class="commitment-container">
+        <h2 class="commitment-title">Our Commitment</h2>
+        <p class="commitment-text">
+            At Noir Brew, we believe that exceptional coffee begins long before it reaches your cup. It starts in the lush,
+            high-altitude regions of Costa Rica, where some of the world’s finest coffee is grown—cultivated by generations
+            of farmers who have perfected their craft with patience, skill, and care.
+        </p>
+        <p class="commitment-text">
+            We are deeply committed to supporting the communities that make our handcrafted coffee possible. Through direct
+            partnerships with local farmers in Costa Rica’s renowned coffee regions, we ensure fair wages, sustainable farming
+            practices, and investment in the well-being of their families. By working closely with these communities, we help
+            provide access to better education, healthcare, and resources that empower future generations.
+        </p>
+        <p class="commitment-text">
+            Beyond ethical sourcing, we celebrate the art of coffee by preserving traditional harvesting and processing
+            methods—ensuring that every bean is handpicked at peak ripeness and carefully roasted to perfection. This
+            dedication to craftsmanship not only honors the rich heritage of coffee cultivation but also delivers an
+            unparalleled experience in every sip.
+        </p>
+        <p class="commitment-text">
+            When you choose Noir Brew, you’re not just enjoying premium coffee—you’re supporting the people, traditions,
+            and lands that make it possible.
+        </p>
+        <div class="commitment-images">
+            <img src="images/senor2.jpg" alt="Coffee Farmer" class="commitment-image">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Noir Brew. All rights reserved.</p>
+    </footer>
+</body>
+</html>    
